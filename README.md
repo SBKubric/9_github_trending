@@ -1,6 +1,6 @@
 # Github Trends
 
-[TODO. There will be project description]
+This script prints the 20 most starred repositories on Github over last week with their open issues number and links to them (if there any).
 
 # Project Goals
 
