@@ -4,8 +4,6 @@ import requests
 from datetime import date
 from dateutil.relativedelta import relativedelta
 
-TOP_SIZE = 20
-
 
 def parse_args():
     parser = argparse.ArgumentParser(description='This script fetches the most starred repos from GitHub.')
@@ -15,7 +13,7 @@ def parse_args():
     parser.add_argument('-ts', '--top_size', default=20, help='Set this value to show less/more repos. '
                                                               'Default is 20')
     parser.add_argument('-tp', '--time_period', default=7, help='It is amount of days during '
-                                                                'which the repos were created'
+                                                                'which the repos were created '
                                                                 'Default is 7')
     return parser.parse_args()
 
