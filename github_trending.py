@@ -63,7 +63,7 @@ def get_issues_count_and_issue_links(repos, access_token=None):
 def print_trending_repos(repos):
     for num, repo in enumerate(repos, start=1):
         author_name, repo_name = repo['full_name'].split('/')
-        print('{}., Author: {} Repo_name: {}  Stars: {} Open_issues: {}'.format(
+        print('{}. Author: {} Repo_name: {}  Stars: {} Open_issues: {}'.format(
             num,
             author_name,
             repo_name,
