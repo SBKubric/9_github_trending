@@ -7,9 +7,9 @@ TOP_SIZE = 20
 
 
 def get_repo_open_issues_urls(full_repo_name):
-    r = requests.get('https://api.github.com/repos/%s/issues' % full_repo_name)
+    request = requests.get('https://api.github.com/repos/%s/issues' % full_repo_name)
     issues_urls = []
-    for issue in r.json():
+    for issue in request.json():
         issues_urls.append(issue['html_url'])
     return issues_urls
 
@@ -20,9 +20,9 @@ def get_trending_repos(top_size):
               'sort': 'stars',
               'order': 'desc',
               }
-    r = requests.get('https://api.github.com/search/repositories', params=params)
+    request = requests.get('https://api.github.com/search/repositories', params=params)
     trending_repos = []
-    for repo in r.json()['items'][:top_size]:
+    for repo in request.json()['items'][:top_size]:
         trending_repos.append({
             'full_name': repo['full_name'],
             'stargazers_count': repo['stargazers_count'],
